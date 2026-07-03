@@ -21,13 +21,13 @@ FROM
   ----
   ----
   -- procedure --> update , delete , insert 
-CREATE PROCEDURE get_emp_by_id (emp_id int) language plpgsql AS $$
+CREATE PROCEDURE delete_emp_by_id (emp_id int) language plpgsql AS $$
   begin 
     delete from employees where employee_id = emp_id;
   end;
   $$
 --
-CALL get_emp_by_id (0)
+CALL delete_emp_by_id (0)
 -----
 -----
 -- Find the average salary of everyone in a department, and update the salary of those whose salary is below the average salary by 10%.
